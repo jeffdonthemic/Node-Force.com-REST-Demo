@@ -1,0 +1,8 @@
+// fields NOT to be displayed	
+- var skipFields = ['attributes','IsDeleted'];
+h1= title
+a(href='/accounts/#{data['Id']}/edit') Edit this record
+ul
+  each val, key in data
+    - if (skipFields.indexOf(key) == -1) 
+      li #{key}: #{val}

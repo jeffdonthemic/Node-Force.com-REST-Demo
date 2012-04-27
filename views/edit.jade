@@ -1,0 +1,11 @@
+// form fields to be displayed	
+- var formFields = ['Name','BillingCity'];
+h1= title
+form(method='post', action='/accounts/#{data['Id']}/update')
+  each val, key in data
+    - if (formFields.indexOf(key) != -1)
+      div
+        label #{key}:
+          input(name='account[#{key}]', value=val || '', type='text')
+  div
+    input(type='submit', value='Save')

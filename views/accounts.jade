@@ -1,0 +1,6 @@
+h1= title
+a(href='/accounts/new') Create a new Account
+p Existing Accounts
+ul
+  each item in data['records']
+    li: a(href='/accounts/#{item['Id']}') #{item['Name']}
