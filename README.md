@@ -2,7 +2,7 @@ Simple Node.js sample application using the salesforce.com REST API and OAuth fo
 
 You can run the application for yourself at the following url. You can authorize access to a production or developer org (recommended) to test out the functionality.
 
-[https://node-sfdc-demo.herokuapp.com](https://node-sfdc-demo.herokuapp.com)
+Demo app at [https://node-sfdc-demo.herokuapp.com](https://node-sfdc-demo.herokuapp.com) & [blog post](http://bit.ly/IwbMJV)
 
 Localhost Setup
 ===============
