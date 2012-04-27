@@ -13,20 +13,17 @@ Create a new Remote Access and use the callback http://localhost:3001 (or whatev
 
 If you don't have node.js installed, you can do so from [http://nodejs.org/#download](http://nodejs.org/#download) 
 
-You'll also need to install Express. The guide and quick are available at [http://expressjs.com/guide.html](http://expressjs.com/guide.html) but you can install it globally with:
+You'll also need to install [Express](http://expressjs.com). The guide and quick start are available at [http://expressjs.com/guide.html](http://expressjs.com/guide.html) but you can install it globally with:
 
 npm install -g express
 
-You'll also need to install restler, a REST client library for node.js:
+You'll also need to install [restler](https://github.com/danwrong/restler), a REST client library for node.js:
  
 npm install restler
 
-I would also highly recommend you install node-dev!!! Node-dev is a development tool for Node.js that automatically restarts the node process when a script is modified. With node-dev you don't have to hit CTRL+C Up-Arrow Enter after every change to your Node.js application.
+I would also highly recommend you install [node-dev](https://github.com/fgnass/node-dev)!!! Node-dev is a development tool for Node.js that automatically restarts the node process when a script is modified. With node-dev you don't have to hit CTRL+C Up-Arrow Enter after every change to your Node.js application.
 
 npm install -g node-dev
-
-Start the application
----------------------
 
 Now you can start your app with:
 
@@ -41,16 +38,16 @@ heroku create [YOUR-APP-NAME] --stack cedar
 
 Add it to git and then push it to heroku.
 
-To run the application on heroku, you'll need set up another Remote Access that point to your heroku site. Salesforce.com requires that non-localhost applications use SSL. Fortunately heroku makes it extremely easy to add SSL. The piggyback SSL add-on is now a platform feature and available by default to all Heroku applications. No need adding the add-on any more!! Just setup another Remote Access with the following callback url:
+To run the application on heroku, you'll need set up another Remote Access that points to your heroku site. Salesforce.com requires that non-localhost applications use SSL. Fortunately heroku makes it extremely easy to add SSL. The piggyback SSL add-on is now a platform feature and available by default to all Heroku applications. No need adding the add-on any more!! Just setup another Remote Access with the following callback url:
 
 https://[YOUR-APP-NAME].herokuapp.com/token
 
-The last thing you should need to do is add your environment variables to heroku with the following:
+The last thing you should need to do is add your new environment variables to heroku with the following:
 
-heroku config:add CLIENT_ID=YOUR-REMOTE-ACCESS-CONSUMER-KEY
-heroku config:add CLIENT_SECRET=YOUR-REMOTE-ACCESS-CONSUMER-SECRET
-heroku config:add LOGIN_SERVER=https://login.salesforce.com
-heroku config:add REDIRECT_URI=https://[YOUR-APP-NAME].herokuapp.com/token
+1. heroku config:add CLIENT_ID=YOUR-REMOTE-ACCESS-CONSUMER-KEY
+2. heroku config:add CLIENT_SECRET=YOUR-REMOTE-ACCESS-CONSUMER-SECRET
+3. heroku config:add LOGIN_SERVER=https://login.salesforce.com
+4. heroku config:add REDIRECT_URI=https://[YOUR-APP-NAME].herokuapp.com/token
 
 You can confirm your environment variables for your app with:
 
