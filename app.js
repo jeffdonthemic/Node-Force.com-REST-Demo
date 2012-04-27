@@ -11,9 +11,9 @@ var express = require('express')
 /**
  * Setup some environment variables (heroku) with defaults if not present
  */
-var port = process.env.PORT || 3001;
-var cid = process.env.CLIENT_ID || "3MVG9VmVOCGHKYBSMFoH607T0CrFoshArJMCoJDv.KRgwjlaVZ8HFtG2XQRcSzNshG5KNKCfFo68YMO5Wjz_L";
-var csecr = process.env.CLIENT_SECRET || "3093855207681701086";
+var port = process.env.PORT || 3001; // use heroku's dynamic port or 3001 if localhost
+var cid = process.env.CLIENT_ID || "YOUR-REMOTE-ACCESS-CONSUMER-KEY";
+var csecr = process.env.CLIENT_SECRET || "YOUR-REMOTE-ACCESS-CONSUMER-SECRET";
 var lserv = process.env.LOGIN_SERVER || "https://login.salesforce.com";
 var redir = process.env.REDIRECT_URI || "http://localhost:" + port + "/token";
 
