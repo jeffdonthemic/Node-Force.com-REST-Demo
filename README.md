@@ -4,37 +4,41 @@ You can run the application for yourself at the following url. You can authorize
 
 Demo app at [https://node-sfdc-demo.herokuapp.com](https://node-sfdc-demo.herokuapp.com) & [blog post](http://bit.ly/IwbMJV)
 
-Localhost Setup
-===============
+SalesForce Setup
+================
 
 The first thing you need to do is set up Remote Access for your application running locally. Log into your DE org and go to Setup -> App Setup -> Develop -> Remote Access
 
 Create a new Remote Access and use the callback http://localhost:3001 (or whatever port you config the app for). Copy the values for the consumer key and consumer secret into app.js.
 
+
+Localhost Setup
+===============
+
 If you don't have node.js installed, you can do so from [http://nodejs.org/#download](http://nodejs.org/#download) 
 
 You'll also need to install [Express](http://expressjs.com). The guide and quick start are available at [http://expressjs.com/guide.html](http://expressjs.com/guide.html) but you can install it globally with:
 
-npm install -g express
+`$ npm install -g express`
 
 You'll also need to install [restler](https://github.com/danwrong/restler), a REST client library for node.js:
  
-npm install restler
+`$ npm install restler`
 
 I would also highly recommend you install [node-dev](https://github.com/fgnass/node-dev)!!! Node-dev is a development tool for Node.js that automatically restarts the node process when a script is modified. With node-dev you don't have to hit CTRL+C Up-Arrow Enter after every change to your Node.js application.
 
-npm install -g node-dev
+`$ npm install -g node-dev`
 
 Now you can start your app with:
 
-node-dev app.js		
+`$ node-dev app.js`		
 
 Heroku Setup
 ============
 
-Create a new application on heroku:
+Create a new application on heroku (using the heroku CLI):
 
-heroku create [YOUR-APP-NAME] --stack cedar
+`$ heroku create [YOUR-APP-NAME] --stack cedar`
 
 Add it to git and then push it to heroku.
 
@@ -51,7 +55,7 @@ The last thing you should need to do is add your new environment variables to he
 
 You can confirm your environment variables for your app with:
 
-heroku config
+`$ heroku config`
 
 Access your application running on heroku and start the OAuth dance!
 
